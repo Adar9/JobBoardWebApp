@@ -96,6 +96,23 @@ namespace JobBoardWebApp.Controllers
             return View();
         }
 
+        public IActionResult Delete(int JobId)
+        {
+            HttpClient client = _api.Initial();
+            var deleteTask = client.DeleteAsync("api/job/" + JobId);
+
+            deleteTask.Wait();
+
+            var result = deleteTask.Result;
+
+            if (result.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
