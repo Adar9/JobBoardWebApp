@@ -1,8 +1,62 @@
-﻿@{
+﻿@model IEnumerable<JobBoardModels.Entities.Job>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
+<script type="text/javascript" src="../JsViews/Home/Index.js"></script>
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Create","Home")'">New</button>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.JobId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpiresAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpiresAt)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { JobId = item.JobId })
+                    @Html.ActionLink("Delete", "Delete", new { JobId = item.JobId }, new { @class = "InfoDelete"})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
