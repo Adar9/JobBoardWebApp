@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "qc+SCT9O0dxC4JNtR0jXZ3K4aKR3SfaoHGxkRi5U269aXA/yMM3odtze5Nwc89LtImPYE5DbSfJ/H7aO40sTPQ==",
+  "dgSpecHash": "DhxR+DCCBv0vc7r6Q1jbVhPbUSx/fBsn+JfkiWmGV8IAiu1W7+f12DqwrGzEo/VIQOk/BCE8qD4onny8hoJ/ug==",
   "success": true,
   "projectFilePath": "C:\\Users\\redua\\source\\repos\\JobBoardWebApp\\JobBoardWebApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\redua\\.nuget\\packages\\jquery\\3.5.1\\jquery.3.5.1.nupkg.sha512",
     "C:\\Users\\redua\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\redua\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\redua\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
